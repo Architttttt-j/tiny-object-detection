@@ -1,0 +1,9 @@
+path: d:\AI-TOD.v2i.yolo26\datasets\baseline2.0
+train: train/images
+val: valid/images
+test: test/images
+nc: 3
+names:
+- '3'
+- '5'
+- '6'
