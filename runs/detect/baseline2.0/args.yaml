@@ -1,6 +1,6 @@
 task: detect
 mode: train
-model: yolo26n.pt
+model: d:\AI-TOD.v2i.yolo26\runs\detect\baseline2.0\weights\last.pt
 data: d:\AI-TOD.v2i.yolo26\datasets\baseline2.0\data.yaml
 epochs: 100
 time: null
@@ -17,7 +17,7 @@ name: baseline2.0
 exist_ok: true
 pretrained: true
 cls_remap: true
-optimizer: auto
+optimizer: AdamW
 verbose: true
 seed: 42
 deterministic: true
@@ -25,7 +25,7 @@ single_cls: false
 rect: false
 cos_lr: false
 close_mosaic: 10
-resume: false
+resume: d:\AI-TOD.v2i.yolo26\runs\detect\baseline2.0\weights\last.pt
 amp: true
 fraction: 1.0
 profile: false
@@ -41,7 +41,7 @@ split: val
 save_json: false
 conf: null
 iou: null
-max_det: 300
+max_det: 1499
 quantize: null
 dnn: false
 plots: true
@@ -71,13 +71,13 @@ dynamic: false
 simplify: true
 opset: null
 workspace: null
-lr0: 0.01
+lr0: 0.001429
 lrf: 0.01
 momentum: 0.937
 weight_decay: 0.0005
 warmup_epochs: 3.0
 warmup_momentum: 0.8
-warmup_bias_lr: 0.1
+warmup_bias_lr: 0.0
 distill_model: null
 dis: 6.0
 box: 7.5
